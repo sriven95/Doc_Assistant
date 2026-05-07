@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  doc-assistant-summary:
+    build: .
+    container_name: doc_assistant_summary
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data        # Mount data folder so Excel files persist
+      - ./logs:/app/logs        # Mount logs folder
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

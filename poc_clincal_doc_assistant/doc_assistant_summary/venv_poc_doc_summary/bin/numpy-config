@@ -1,0 +1,6 @@
+#!/Users/akhilakotagiri/Desktop/poc_clincal_doc_assistant/doc_assistant_summary/venv_poc_doc_summary/bin/python3.11
+import sys
+from numpy._configtool import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

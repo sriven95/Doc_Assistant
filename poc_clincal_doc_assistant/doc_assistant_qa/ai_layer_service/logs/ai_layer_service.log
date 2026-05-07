@@ -1,0 +1,954 @@
+2026-04-02 17:08:46 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:08:55 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:08:55 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:08:55 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:08:55 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:10:07 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P001 | question=What SDOH risks does this patient have?
+2026-04-02 17:10:07 | INFO     | ai_layer_service | Question | person_id=P001 | q=What SDOH risks does this patient have?
+2026-04-02 17:10:07 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P001
+2026-04-02 17:10:07 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P001 | chunks=0
+2026-04-02 17:10:07 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P001
+2026-04-02 17:10:17 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What SDOH risks does this patient have?
+2026-04-02 17:10:17 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What SDOH risks does this patient have?
+2026-04-02 17:10:18 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-02 17:10:18 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-02 17:10:18 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 17:10:18 | INFO     | ai_layer_service | Session expired — new session created | person_id=P0001
+2026-04-02 17:10:28 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 17:10:49 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Ok
+2026-04-02 17:10:49 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Ok
+2026-04-02 17:10:50 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 17:12:08 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Ok
+2026-04-02 17:12:08 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Ok
+2026-04-02 17:12:10 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 17:12:22 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What SDOH risks does this patient have?
+2026-04-02 17:12:22 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What SDOH risks does this patient have?
+2026-04-02 17:12:31 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=4
+2026-04-02 17:30:15 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 17:30:15 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 17:30:15 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 17:30:15 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-02 17:30:29 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What is discharge plan
+2026-04-02 17:30:29 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What is discharge plan
+2026-04-02 17:30:37 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 17:32:35 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Ok
+2026-04-02 17:32:35 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Ok
+2026-04-02 17:32:37 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 17:32:53 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=what disease
+2026-04-02 17:32:53 | INFO     | ai_layer_service | Question | person_id=P0001 | q=what disease
+2026-04-02 17:32:56 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 17:33:18 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=for RA hwhcih meidicnae give
+2026-04-02 17:33:18 | INFO     | ai_layer_service | Question | person_id=P0001 | q=for RA hwhcih meidicnae give
+2026-04-02 17:33:20 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=4
+2026-04-02 17:33:30 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=chronic respiratory distress
+2026-04-02 17:33:30 | INFO     | ai_layer_service | Question | person_id=P0001 | q=chronic respiratory distress
+2026-04-02 17:33:34 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=5
+2026-04-02 17:37:28 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What social determinants of health risks does this
+2026-04-02 17:37:28 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What social determinants of health risks does this patient h
+2026-04-02 17:37:35 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=6
+2026-04-02 17:37:41 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What is the current discharge plan and what is sti
+2026-04-02 17:37:41 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What is the current discharge plan and what is still pending
+2026-04-02 17:37:45 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=7
+2026-04-02 17:37:51 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Who is the emergency contact for this patient?
+2026-04-02 17:37:51 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Who is the emergency contact for this patient?
+2026-04-02 17:37:54 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=8
+2026-04-02 17:37:59 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Has this patient had any previous home health serv
+2026-04-02 17:37:59 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Has this patient had any previous home health services?
+2026-04-02 17:38:02 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=9
+2026-04-02 17:38:10 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Based on what you just told me about the discharge
+2026-04-02 17:38:10 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Based on what you just told me about the discharge plan, wha
+2026-04-02 17:38:18 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=10
+2026-04-02 17:38:26 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Ok
+2026-04-02 17:38:26 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Ok
+2026-04-02 17:38:28 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=11
+2026-04-02 17:38:32 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Bye
+2026-04-02 17:38:32 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Bye
+2026-04-02 17:38:34 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=12
+2026-04-02 17:38:59 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Ohh k
+2026-04-02 17:38:59 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Ohh k
+2026-04-02 17:39:01 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=13
+2026-04-02 17:41:34 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:41:35 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:41:36 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:41:36 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:41:36 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:41:36 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:41:40 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:41:40 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:41:42 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:41:42 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:41:42 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:41:42 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:41:42 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:41:43 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:41:43 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:41:43 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:41:43 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:43:37 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Nice
+2026-04-02 17:43:37 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Nice
+2026-04-02 17:43:37 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-02 17:43:38 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-02 17:43:39 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=14
+2026-04-02 17:47:42 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:47:42 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:47:44 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:47:44 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:47:44 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:47:44 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:48:42 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:48:43 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:48:44 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:48:44 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:48:44 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:48:44 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:48:45 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:48:46 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:48:46 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:48:46 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:48:46 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:02 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:49:02 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:03 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:03 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:03 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:03 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:04 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:05 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:05 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:05 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:05 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:05 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:06 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:06 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:06 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:06 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:07 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:49:07 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:08 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:08 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:08 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:08 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:50 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:49:50 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:51 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:52 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:52 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:52 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:52 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:53 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:54 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:54 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:54 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:54 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:49:54 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:49:55 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:49:55 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:49:55 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:49:55 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:05 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:50:06 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:07 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:07 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:07 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:07 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:07 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:08 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:08 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:08 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:08 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:20 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:50:20 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:22 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:22 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:22 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:22 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:30 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-02 17:50:30 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:32 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:32 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:32 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:32 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:32 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:33 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:33 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:33 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:33 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:50:33 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 17:50:34 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 17:50:34 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 17:50:34 | INFO     | ai_layer_service | =======================================================
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Redis connected
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 17:50:34 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 17:52:09 | INFO     | ai_layer_service | Session clear endpoint | person_id=P0001
+2026-04-02 17:52:09 | INFO     | ai_layer_service | Session manually cleared | person_id=P0001
+2026-04-02 17:52:12 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0002
+2026-04-02 17:52:12 | INFO     | ai_layer_service | Chat start | person_id=P0002
+2026-04-02 17:52:12 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0002
+2026-04-02 17:52:12 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0002 | chunks=3
+2026-04-02 17:52:12 | INFO     | ai_layer_service | New session created | person_id=P0002 | ttl=900s
+2026-04-02 17:52:12 | INFO     | ai_layer_service | Session | person_id=P0002 | status=new_session | turns=0 | ttl=900s
+2026-04-02 17:52:30 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Hi
+2026-04-02 17:52:30 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Hi
+2026-04-02 17:52:32 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 17:53:19 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Give me a brief overview of this patient
+2026-04-02 17:53:19 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Give me a brief overview of this patient
+2026-04-02 17:53:22 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 17:53:32 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=What is the most critical thing to know about this
+2026-04-02 17:53:32 | INFO     | ai_layer_service | Question | person_id=P0002 | q=What is the most critical thing to know about this patient b
+2026-04-02 17:53:36 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 17:53:56 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0002
+2026-04-02 17:53:56 | INFO     | ai_layer_service | Chat start | person_id=P0002
+2026-04-02 17:53:56 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0002 | turns=3 | ttl=796s
+2026-04-02 17:53:56 | INFO     | ai_layer_service | Session | person_id=P0002 | status=existing_session | turns=3 | ttl=796s
+2026-04-02 17:54:15 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=WHat is dischafrge plan
+2026-04-02 17:54:15 | INFO     | ai_layer_service | Question | person_id=P0002 | q=WHat is dischafrge plan
+2026-04-02 17:54:18 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=4
+2026-04-02 17:54:28 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Give me a brief overview of this patient
+2026-04-02 17:54:28 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Give me a brief overview of this patient
+2026-04-02 17:54:31 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=5
+2026-04-02 17:54:39 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=What is the most critical thing to know about this
+2026-04-02 17:54:39 | INFO     | ai_layer_service | Question | person_id=P0002 | q=What is the most critical thing to know about this patient b
+2026-04-02 17:54:41 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=6
+2026-04-02 17:54:47 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Based on the overview you just gave me, what SDOH 
+2026-04-02 17:54:47 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Based on the overview you just gave me, what SDOH risks stan
+2026-04-02 17:54:50 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=7
+2026-04-02 17:54:55 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=What are the pending action items for the care tea
+2026-04-02 17:54:55 | INFO     | ai_layer_service | Question | person_id=P0002 | q=What are the pending action items for the care team?
+2026-04-02 17:54:58 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=8
+2026-04-02 17:55:03 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Given everything you know about this patient — the
+2026-04-02 17:55:03 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Given everything you know about this patient — their conditi
+2026-04-02 17:55:08 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=9
+2026-04-02 17:55:19 | INFO     | ai_layer_service | Session clear endpoint | person_id=P0002
+2026-04-02 17:55:20 | INFO     | ai_layer_service | Session manually cleared | person_id=P0002
+2026-04-02 17:55:20 | INFO     | ai_layer_service | Evicted from memory cache | person_id=P0002
+2026-04-02 17:55:21 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 17:55:21 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 17:55:21 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-02 17:55:21 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-02 17:55:21 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 17:55:21 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-02 17:59:56 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0004
+2026-04-02 17:59:56 | INFO     | ai_layer_service | Chat start | person_id=P0004
+2026-04-02 17:59:56 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0004
+2026-04-02 17:59:56 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0004 | chunks=2
+2026-04-02 17:59:56 | INFO     | ai_layer_service | New session created | person_id=P0004 | ttl=900s
+2026-04-02 17:59:56 | INFO     | ai_layer_service | Session | person_id=P0004 | status=new_session | turns=0 | ttl=900s
+2026-04-02 18:00:00 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0004 | question=What SDOH risks does this patient have?
+2026-04-02 18:00:00 | INFO     | ai_layer_service | Question | person_id=P0004 | q=What SDOH risks does this patient have?
+2026-04-02 18:00:02 | INFO     | ai_layer_service | Answer generated | person_id=P0004 | sources=2 | rag_history_turns=0 | turns=1
+2026-04-02 18:00:32 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0003
+2026-04-02 18:00:32 | INFO     | ai_layer_service | Chat start | person_id=P0003
+2026-04-02 18:00:32 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0003
+2026-04-02 18:00:32 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0003 | chunks=1
+2026-04-02 18:00:32 | INFO     | ai_layer_service | New session created | person_id=P0003 | ttl=900s
+2026-04-02 18:00:32 | INFO     | ai_layer_service | Session | person_id=P0003 | status=new_session | turns=0 | ttl=900s
+2026-04-02 18:00:35 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=Hi
+2026-04-02 18:00:35 | INFO     | ai_layer_service | Question | person_id=P0003 | q=Hi
+2026-04-02 18:00:37 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=0 | turns=1
+2026-04-02 18:00:42 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=how are you
+2026-04-02 18:00:42 | INFO     | ai_layer_service | Question | person_id=P0003 | q=how are you
+2026-04-02 18:00:44 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=1 | turns=2
+2026-04-02 18:30:15 | INFO     | ai_layer_service | Cache eviction | evicted=['P0001', 'P0004'] | remaining=['P0003']
+2026-04-02 18:49:35 | INFO     | ai_layer_service | Cache eviction | evicted=['P0003'] | remaining=[]
+2026-04-02 10:23:05 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-02 10:23:13 | INFO     | ai_layer_service | =======================================================
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Env        : development
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-02 10:23:13 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-02 10:23:13 | INFO     | ai_layer_service | =======================================================
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Gemini LLM: authenticated via service account JSON
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Redis connected
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-02 10:23:13 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-02 10:38:17 | INFO     | ai_layer_service | Chat start endpoint | person_id=P001
+2026-04-02 10:38:17 | INFO     | ai_layer_service | Chat start | person_id=P001
+2026-04-02 10:38:17 | WARNING  | ai_layer_service | No summary found | person_id=P001
+2026-04-02 10:38:26 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 10:38:26 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 10:38:26 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-02 10:38:26 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-02 10:38:26 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 10:38:26 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-02 10:44:40 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 10:44:40 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 10:44:40 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0001 | turns=0 | ttl=526s
+2026-04-02 10:44:40 | INFO     | ai_layer_service | Session | person_id=P0001 | status=existing_session | turns=0 | ttl=526s
+2026-04-02 10:44:47 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-02 10:44:47 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-02 10:44:48 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 10:46:10 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What social determinants of health risks does this
+2026-04-02 10:46:10 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What social determinants of health risks does this patient h
+2026-04-02 10:46:15 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 10:46:29 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What is the current discharge plan and what is sti
+2026-04-02 10:46:29 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What is the current discharge plan and what is still pending
+2026-04-02 10:46:34 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 10:47:08 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=what is patient ssn ?
+2026-04-02 10:47:08 | INFO     | ai_layer_service | Question | person_id=P0001 | q=what is patient ssn ?
+2026-04-02 10:47:09 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=4
+2026-04-02 10:51:17 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=help me with summary
+2026-04-02 10:51:17 | INFO     | ai_layer_service | Question | person_id=P0001 | q=help me with summary
+2026-04-02 10:51:19 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=5
+2026-04-02 10:55:37 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0003
+2026-04-02 10:55:37 | INFO     | ai_layer_service | Chat start | person_id=P0003
+2026-04-02 10:55:37 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0003
+2026-04-02 10:55:37 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0003 | chunks=1
+2026-04-02 10:55:37 | INFO     | ai_layer_service | New session created | person_id=P0003 | ttl=900s
+2026-04-02 10:55:37 | INFO     | ai_layer_service | Session | person_id=P0003 | status=new_session | turns=0 | ttl=900s
+2026-04-02 10:55:53 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=hi
+2026-04-02 10:55:53 | INFO     | ai_layer_service | Question | person_id=P0003 | q=hi
+2026-04-02 10:55:54 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=0 | turns=1
+2026-04-02 10:56:11 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=What social determinants of health risks does this
+2026-04-02 10:56:11 | INFO     | ai_layer_service | Question | person_id=P0003 | q=What social determinants of health risks does this patient h
+2026-04-02 10:56:13 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=1 | turns=2
+2026-04-02 10:56:37 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=Has this patient had any previous home health serv
+2026-04-02 10:56:37 | INFO     | ai_layer_service | Question | person_id=P0003 | q=Has this patient had any previous home health services?
+2026-04-02 10:56:39 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=2 | turns=3
+2026-04-02 10:56:56 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0003 | question=Based on what you just told me about the discharge
+2026-04-02 10:56:56 | INFO     | ai_layer_service | Question | person_id=P0003 | q=Based on what you just told me about the discharge plan, wha
+2026-04-02 10:56:58 | INFO     | ai_layer_service | Answer generated | person_id=P0003 | sources=1 | rag_history_turns=2 | turns=4
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Session clear endpoint | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Session manually cleared | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Evicted from memory cache | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Chat start | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0003
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0003 | chunks=1
+2026-04-02 11:06:07 | INFO     | ai_layer_service | New session created | person_id=P0003 | ttl=900s
+2026-04-02 11:06:07 | INFO     | ai_layer_service | Session | person_id=P0003 | status=new_session | turns=0 | ttl=900s
+2026-04-02 11:06:25 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0002
+2026-04-02 11:06:25 | INFO     | ai_layer_service | Chat start | person_id=P0002
+2026-04-02 11:06:25 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0002
+2026-04-02 11:06:25 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0002 | chunks=3
+2026-04-02 11:06:25 | INFO     | ai_layer_service | New session created | person_id=P0002 | ttl=900s
+2026-04-02 11:06:25 | INFO     | ai_layer_service | Session | person_id=P0002 | status=new_session | turns=0 | ttl=900s
+2026-04-02 11:06:33 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=hi
+2026-04-02 11:06:33 | INFO     | ai_layer_service | Question | person_id=P0002 | q=hi
+2026-04-02 11:06:34 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 11:06:48 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=What social determinants of health risks does this
+2026-04-02 11:06:48 | INFO     | ai_layer_service | Question | person_id=P0002 | q=What social determinants of health risks does this patient h
+2026-04-02 11:06:50 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 11:07:08 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0002 | question=Has this patient had any previous home health serv
+2026-04-02 11:07:08 | INFO     | ai_layer_service | Question | person_id=P0002 | q=Has this patient had any previous home health services?
+2026-04-02 11:07:10 | INFO     | ai_layer_service | Answer generated | person_id=P0002 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 11:11:25 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 11:11:25 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 11:11:25 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 11:11:25 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-02 11:11:38 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=can you give me the patiemnt name?
+2026-04-02 11:11:38 | INFO     | ai_layer_service | Question | person_id=P0001 | q=can you give me the patiemnt name?
+2026-04-02 11:11:40 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-02 11:20:38 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-02 11:20:38 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-02 11:20:39 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-02 11:20:54 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What social determinants of health risks does this
+2026-04-02 11:20:54 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What social determinants of health risks does this patient h
+2026-04-02 11:20:57 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-02 11:38:13 | INFO     | ai_layer_service | Cache eviction | evicted=['P0003', 'P0002'] | remaining=['P0001']
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Session clear endpoint | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Session manually cleared | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Evicted from memory cache | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-02 11:48:33 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-02 11:48:33 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-02 11:48:46 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-02 11:48:46 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-02 11:48:46 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0001 | turns=0 | ttl=887s
+2026-04-02 11:48:46 | INFO     | ai_layer_service | Session | person_id=P0001 | status=existing_session | turns=0 | ttl=887s
+2026-04-03 12:45:50 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 12:45:52 | INFO     | ai_layer_service | =======================================================
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 12:45:52 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 12:45:52 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:03:41 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 13:03:44 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 13:03:44 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 13:03:44 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Redis connected
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-03 13:03:44 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-03 13:16:11 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-03 13:16:13 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 13:16:17 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 13:16:17 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 13:16:17 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Redis connected
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-03 13:16:17 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-03 13:16:19 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 13:16:22 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 13:16:22 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 13:16:22 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:22 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-03 13:16:22 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-03 13:16:22 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-03 13:16:22 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-03 13:16:23 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-03 13:16:23 | INFO     | ai_layer_service | Redis connected
+2026-04-03 13:16:23 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-03 13:16:23 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-03 13:16:23 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-03 13:16:24 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 13:16:27 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 13:16:27 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 13:16:27 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:27 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-03 13:16:27 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-03 13:16:27 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-03 13:16:27 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-03 13:16:28 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-03 13:16:28 | INFO     | ai_layer_service | Redis connected
+2026-04-03 13:16:28 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-03 13:16:28 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-03 13:16:28 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-03 13:16:30 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-03 13:16:32 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Env        : development
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-03 13:16:32 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-03 13:16:32 | INFO     | ai_layer_service | =======================================================
+2026-04-03 13:16:32 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-03 13:16:32 | INFO     | ai_layer_service | Gemini LLM: authenticated via API key (JSON not found)
+2026-04-03 13:16:32 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-03 13:16:32 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-03 13:16:33 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-03 13:16:33 | INFO     | ai_layer_service | Redis connected
+2026-04-03 13:16:33 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-03 13:16:33 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-03 13:16:33 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-03 13:47:57 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-03 13:47:57 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-03 13:47:58 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-03 13:47:58 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=0
+2026-04-03 13:47:58 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-03 13:47:58 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-03 13:48:09 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-03 13:48:09 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-03 13:48:09 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P0001
+2026-04-03 13:50:04 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=summary
+2026-04-03 13:50:04 | INFO     | ai_layer_service | Question | person_id=P0001 | q=summary
+2026-04-03 13:50:05 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P0001
+2026-04-03 13:54:42 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-03 13:54:42 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-03 13:54:42 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0001 | turns=0 | ttl=496s
+2026-04-03 13:54:42 | INFO     | ai_layer_service | Session | person_id=P0001 | status=existing_session | turns=0 | ttl=496s
+2026-04-03 13:54:53 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-03 13:54:53 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-03 13:54:54 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P0001
+2026-04-03 14:08:14 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-03 14:08:14 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-03 14:08:14 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-03 14:08:14 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-03 14:08:27 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-03 14:08:27 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-03 14:08:27 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P0001
+2026-04-03 14:57:13 | INFO     | ai_layer_service | Cache eviction | evicted=['P0001'] | remaining=[]
+2026-04-06 10:17:04 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 10:17:04 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 10:17:04 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-06 10:17:04 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=0
+2026-04-06 10:17:04 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-06 10:17:04 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-06 10:17:16 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-06 10:17:16 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-06 10:17:16 | WARNING  | ai_layer_service | No vectors in cache or Qdrant | person_id=P0001
+2026-04-06 10:18:53 | INFO     | ai_layer_service | Session clear endpoint | person_id=P0001
+2026-04-06 10:18:53 | INFO     | ai_layer_service | Session manually cleared | person_id=P0001
+2026-04-06 10:18:53 | INFO     | ai_layer_service | Evicted from memory cache | person_id=P0001
+2026-04-06 10:18:55 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 10:18:55 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 10:18:55 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-06 10:18:55 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-06 10:18:55 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-06 10:18:55 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-06 10:19:08 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-06 10:19:08 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-06 10:19:09 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-06 10:54:28 | INFO     | ai_layer_service | Cache eviction | evicted=['P0001'] | remaining=[]
+2026-04-06 19:24:28 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 19:24:28 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 19:24:28 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-06 19:24:28 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-06 19:24:28 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-06 19:24:28 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-06 19:24:42 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-06 19:24:42 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-06 19:24:43 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-06 19:28:01 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What social determinants of health risks does this
+2026-04-06 19:28:01 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What social determinants of health risks does this patient h
+2026-04-06 19:28:08 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=1 | turns=2
+2026-04-06 19:28:18 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What is the current discharge plan and what is sti
+2026-04-06 19:28:18 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What is the current discharge plan and what is still pending
+2026-04-06 19:28:23 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=3
+2026-04-06 19:28:42 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=What llm your using
+2026-04-06 19:28:42 | INFO     | ai_layer_service | Question | person_id=P0001 | q=What llm your using
+2026-04-06 19:28:44 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=4
+2026-04-06 19:29:09 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=what embedding your using
+2026-04-06 19:29:09 | INFO     | ai_layer_service | Question | person_id=P0001 | q=what embedding your using
+2026-04-06 19:29:15 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=5
+2026-04-06 19:29:49 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=what gemini version your
+2026-04-06 19:29:49 | INFO     | ai_layer_service | Question | person_id=P0001 | q=what gemini version your
+2026-04-06 19:29:50 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=6
+2026-04-06 19:30:12 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=what is my app name
+2026-04-06 19:30:12 | INFO     | ai_layer_service | Question | person_id=P0001 | q=what is my app name
+2026-04-06 19:30:16 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=2 | turns=7
+2026-04-06 20:00:44 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-06 20:00:46 | INFO     | ai_layer_service | =======================================================
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Env        : development
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-06 20:00:46 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-06 20:00:46 | INFO     | ai_layer_service | =======================================================
+2026-04-06 20:00:47 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-06 20:00:48 | INFO     | ai_layer_service | Gemini LLM: authenticated via service account JSON
+2026-04-06 20:00:48 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-06 20:00:48 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-06 20:00:49 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-06 20:00:49 | INFO     | ai_layer_service | Redis connected
+2026-04-06 20:00:49 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-06 20:00:49 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-06 20:00:49 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-06 20:04:22 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:04:22 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:04:22 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-06 20:04:22 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-06 20:04:22 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-06 20:04:22 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-06 20:04:33 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-06 20:04:33 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-06 20:11:10 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:11:10 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:12:29 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:12:29 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:12:52 | INFO     | ai_layer_service | Chat start endpoint | person_id=P001
+2026-04-06 20:12:52 | INFO     | ai_layer_service | Chat start | person_id=P001
+2026-04-06 20:12:52 | WARNING  | ai_layer_service | No summary found | person_id=P001
+2026-04-06 20:13:44 | INFO     | ai_layer_service | Chat start endpoint | person_id=P001
+2026-04-06 20:13:44 | INFO     | ai_layer_service | Chat start | person_id=P001
+2026-04-06 20:13:44 | WARNING  | ai_layer_service | No summary found | person_id=P001
+2026-04-06 20:13:49 | INFO     | ai_layer_service | Chat start endpoint | person_id=P001
+2026-04-06 20:13:49 | INFO     | ai_layer_service | Chat start | person_id=P001
+2026-04-06 20:13:49 | WARNING  | ai_layer_service | No summary found | person_id=P001
+2026-04-06 20:14:06 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:14:06 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:14:53 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:14:53 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:14:53 | INFO     | ai_layer_service | New session created | person_id=P0001 | ttl=900s
+2026-04-06 20:14:53 | INFO     | ai_layer_service | Session | person_id=P0001 | status=new_session | turns=0 | ttl=900s
+2026-04-06 20:15:04 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=Hi
+2026-04-06 20:15:04 | INFO     | ai_layer_service | Question | person_id=P0001 | q=Hi
+2026-04-06 20:15:34 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-06 20:15:34 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-06 20:15:50 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:15:50 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:15:50 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0001 | turns=0 | ttl=843s
+2026-04-06 20:15:50 | INFO     | ai_layer_service | Session | person_id=P0001 | status=existing_session | turns=0 | ttl=843s
+2026-04-06 20:16:00 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-06 20:16:00 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-06 20:16:31 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P001 | question=What SDOH risks does this patient have?
+2026-04-06 20:16:31 | INFO     | ai_layer_service | Question | person_id=P001 | q=What SDOH risks does this patient have?
+2026-04-06 20:17:11 | INFO     | ai_layer_service | AI layer service shutting down.
+2026-04-06 20:17:36 | INFO     | ai_layer_service | AI layer service logging initialised
+2026-04-06 20:17:38 | INFO     | ai_layer_service | =======================================================
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   AI Layer Service starting up
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Env        : development
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   LLM        : gemini-2.5-flash
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Embedder   : models/gemini-embedding-001
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Qdrant     : localhost:6565
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Redis      : localhost:6379
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Session TTL: 900s (fixed)
+2026-04-06 20:17:38 | INFO     | ai_layer_service |   Max turns  : 20
+2026-04-06 20:17:38 | INFO     | ai_layer_service | =======================================================
+2026-04-06 20:17:39 | INFO     | ai_layer_service | Gemini embedder initialised
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Gemini LLM: authenticated via service account JSON
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Gemini LLM initialised | model=gemini-2.5-flash
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Gemini LLM initialised
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Qdrant connected | patient_clinical_notes
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Redis connected
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Cache eviction task scheduled
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Background cache eviction task started (30 min inactivity)
+2026-04-06 20:17:40 | INFO     | ai_layer_service | Cache eviction background task started
+2026-04-06 20:18:34 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0004
+2026-04-06 20:18:34 | INFO     | ai_layer_service | Chat start | person_id=P0004
+2026-04-06 20:18:34 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0004
+2026-04-06 20:18:34 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0004 | chunks=2
+2026-04-06 20:18:34 | INFO     | ai_layer_service | New session created | person_id=P0004 | ttl=900s
+2026-04-06 20:18:34 | INFO     | ai_layer_service | Session | person_id=P0004 | status=new_session | turns=0 | ttl=900s
+2026-04-06 20:18:49 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0004 | question=hey
+2026-04-06 20:18:49 | INFO     | ai_layer_service | Question | person_id=P0004 | q=hey
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Chat start endpoint | person_id=P0001
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Chat start | person_id=P0001
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Cache miss — loading from Qdrant | person_id=P0001
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Patient loaded into memory cache | person_id=P0001 | chunks=3
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Existing session retrieved | person_id=P0001 | turns=0 | ttl=489s
+2026-04-06 20:21:44 | INFO     | ai_layer_service | Session | person_id=P0001 | status=existing_session | turns=0 | ttl=489s
+2026-04-06 20:21:54 | INFO     | ai_layer_service | Chat ask endpoint | person_id=P0001 | question=hi
+2026-04-06 20:21:54 | INFO     | ai_layer_service | Question | person_id=P0001 | q=hi
+2026-04-06 20:21:55 | INFO     | ai_layer_service | Answer generated | person_id=P0001 | sources=3 | rag_history_turns=0 | turns=1
+2026-04-06 21:18:48 | INFO     | ai_layer_service | Cache eviction | evicted=['P0004', 'P0001'] | remaining=[]

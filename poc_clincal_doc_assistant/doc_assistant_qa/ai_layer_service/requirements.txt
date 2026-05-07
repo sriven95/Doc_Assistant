@@ -1,0 +1,13 @@
+fastapi==0.115.6
+uvicorn[standard]==0.29.0
+pandas==2.2.2
+openpyxl==3.1.2
+google-generativeai==0.7.2
+google-auth==2.29.0
+google-auth-httplib2==0.2.0
+python-dotenv==1.0.1
+pydantic==2.10.6
+pydantic-settings==2.7.1
+qdrant-client==1.9.1
+redis==5.0.4
+tiktoken==0.7.0
